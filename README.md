@@ -3,6 +3,8 @@ Contoh penerapan led matrix 8x8 untuk board esp32 menggunakan micropython
 
 ![](esp32-led-matrix.png)
 
+> Format fritzing dapat didapatkan di [sini](esp32-led-matrix.fzz)
+
 ## Wiring
 ESP32            | max7219 8x8 LED Matrix
 ---------------- | ----------------------
