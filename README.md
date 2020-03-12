@@ -32,4 +32,21 @@ D4 SCK           | CLK
 4. `micropy init`
 5. `micropy install <PACKAGE_NAMES>`, optional ketika ingin install paket yang dibutuhkan. misalkan install paket `picoweb`, `micropy install picoweb`
 
+## Contoh code
+```python
+from machine import Pin, SPI
+import max7219, utime
+
+spi = SPI(1, baudrate=10000000, polarity=1, phase=0, sck=Pin(4), mosi=Pin(2))
+d = max7219.Max7219(32, 8, spi, Pin(5), False)
+d.brightness(5)
+d.text("^_^",0,0)
+d.show()
+utime.sleep(3)
+
+while True:
+    d.marquee("Politeknik Negeri Malang...")
+    d.marquee("Jos...")
+```
+
 > Pada file [pymakr.conf](pymakr.conf), silakan ganti `"address": "/dev/tty.SLAB_USBtoUART"` dengan port yang digunakan untuk controller Anda. Jika menggunakan windows cek di device manager terdeteksi di port mana.
