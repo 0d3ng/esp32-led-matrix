@@ -31,3 +31,5 @@ D4 SCK           | CLK
 3. `micropy stubs add <NAME_STUB>`, misalkan `esp32-micropython-1.12.0` yang akan digunakan berarti `micropy stubs add esp32-micropython-1.12.0`
 4. `micropy init`
 5. `micropy install <PACKAGE_NAMES>`, optional ketika ingin install paket yang dibutuhkan. misalkan install paket `picoweb`, `micropy install picoweb`
+
+> Pada file [pymakr.conf](pymakr.conf), silakan ganti `"address": "/dev/tty.SLAB_USBtoUART"` dengan port yang digunakan untuk controller Anda. Jika menggunakan windows cek di device manager terdeteksi di port mana.
